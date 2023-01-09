@@ -12,7 +12,7 @@ const handlerSubmit=(event)=>{
 
    return (
       <form onSubmit={handlerSubmit}>
-        <input value={input} onChange={handlerInput} class="searchbarin" type="text" placeholder="Search..." />
+        <input value={input} onChange={handlerInput} class="searchbarin" type="text" placeholder="Search ID..." />
         <button className="searchbarbut" type="submit">ADD</button>
       </form>
     );
