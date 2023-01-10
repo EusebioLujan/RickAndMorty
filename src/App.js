@@ -26,9 +26,8 @@ function App() {
       });
   }
   const onCharacterRemove = (id) => {
-    setCharacters(characters.filter(character => character.id !== id));
-  }
-
+    setCharacters(characters.filter((character) => character.id !== id));
+  };
 
   return (
     <div className="App" style={{ padding: "25px" }}>
@@ -39,7 +38,10 @@ function App() {
         <h1 className="elqueyoquiera">Search Your ID Character</h1>
       ) : (
         <div>
-          <Cards characters={characters} onCharacterRemove={onCharacterRemove}/>
+          <Cards
+            characters={characters}
+            onCharacterRemove={onCharacterRemove}
+          />
         </div>
       )}
     </div>
