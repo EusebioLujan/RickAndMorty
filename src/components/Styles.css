@@ -100,7 +100,7 @@
   max-width: 90%;
   
 }
-img {
+.img {
   position: relative;
   cursor: pointer;
   border-radius: 30px;

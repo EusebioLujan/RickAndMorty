@@ -11,7 +11,7 @@ const Card = (props) => {
                 </button>
             </div>
             <Link to={`/detail/${props.id}`}><div className="card-image">
-                <img src={props.image} alt={props.name} />
+                <img className="img"src={props.image} alt={props.name} />
                 <div className="card-info">
                         <p className="card-name">{props.name}</p>
                     <div className="card-speandgen">
