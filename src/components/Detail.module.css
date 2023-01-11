@@ -2,12 +2,15 @@
     display: flex;
     color:black;
     width: 51%;
+    height: 470px;
     box-shadow: 1px white;
     margin: auto;
+    margin-top: 150px;
     border: 1px solid white;
     background-image: url("./img/plantillacard.png");
     background-size:contain;
     box-shadow: -1px 3px 14px 7px rgba(1, 217, 255, 0.703);
+    
 }
 
 .fotoid{
@@ -27,17 +30,17 @@ clip-path: polygon(68% 0, 98% 50%, 70% 100%, 0% 100%, 0 51%, 0% 0%);
 .info{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align:left;
     width:50%;
     margin: auto;
 }
+
 .name{
-    margin-top: 20px;
-    margin-bottom: 50px;
+text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
-.species{
-    
-}
+
 
 
 
@@ -46,7 +49,7 @@ clip-path: polygon(68% 0, 98% 50%, 70% 100%, 0% 100%, 0 51%, 0% 0%);
     flex-direction: row;
     justify-content: center;
 align-self:center;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 150px;
 }
 .botonverde img{
@@ -57,8 +60,4 @@ margin: auto;
 .botonverde h2{
     white-space: nowrap;
 
-}
-.licencia{
-    color:white;
-    
 }

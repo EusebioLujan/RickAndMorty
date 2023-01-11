@@ -23,28 +23,28 @@ export default function Detail(){
     
     return(
         <>
-        <h1 className={styles.licencia}>ID CARD 🛸</h1>
+        
     <div className={styles.div}>
     
 
     <div className={styles.fotoid}>
         <img src={character.image} alt={character.id}/>
-        <h2>Numero de Identificación: {character.id}</h2>
+        <h2>ID de Identificación: {character.id}</h2>
     </div>
 
     <div className={styles.info}>
         <h1 className={styles.name}>{character.name}</h1>
     <div>
 
-         <h2 className={styles.species}>Especie: {character.species}</h2>
-         <h2 className={styles.genero}>Género: {character.gender}</h2>
-         <h2 className={styles.origen}>Origen: {character.origin?.name}</h2> 
-         <h2 className={styles.locat}>Localización: {character.location?.name}</h2>
+         <h2>Especie: {character.species}</h2>
+         <h2>Género: {character.gender}</h2>
+         <h2>Origen: {character.origin?.name}</h2> 
+         <h2>Localización: {character.location?.name}</h2>
     
     </div>
 
     <div className={styles.botonverde}>
-        <h2>Status: {character.status} 🟢</h2>
+    {character.status==="Alive"? <h2>Status: {character.status} 🟢</h2>:<h2>Status: {character.status} 🔴</h2>} 
          {/* <img  src={"https://i.imgur.com/NvaLTnq.png"} alt="Status Boton"/> */}
     </div>
          
