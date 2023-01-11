@@ -2,9 +2,13 @@ import "./App.css";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav";
 import { useState } from "react";
+import {Routes, Route} from "react-router-dom";
+import About from "./components/About.jsx";
+import Detail from "./components/Detail.jsx";
+import Cardempty from "./components/Cardempty";
 
 function App() {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState([]); 
   function onSearch(character) {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())
@@ -25,25 +29,23 @@ function App() {
         }
       });
   }
-  const onCharacterRemove = (id) => {
+   const onCharacterRemove = (id) => {
     setCharacters(characters.filter((character) => character.id !== id));
-  };
+  }; 
+
+ 
+
 
   return (
     <div className="App" style={{ padding: "25px" }}>
-      <div>
-        <Nav onSearch={onSearch}></Nav>
-      </div>
-      {characters.length < 1 ? (
-        <h1 className="elqueyoquiera">Search Your ID Character</h1>
-      ) : (
-        <div>
-          <Cards
-            characters={characters}
-            onCharacterRemove={onCharacterRemove}
-          />
-        </div>
-      )}
+      <Nav onSearch={onSearch}/>
+      <Routes>
+        <Route path="/" element={<Cards characters={characters}
+        onCharacterRemove={onCharacterRemove}/>}></Route>
+        <Route path="about" element={<Cardempty/>}></Route>
+        <Route path="about" element={<About/>}></Route>
+        <Route path="detail/:id" element={<Detail/>}></Route>
+      </Routes>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import { useState } from "react";
 
+
 export default function SearchBar(props) {
   const [input,setInput]=useState("")
+  const [randomNumber, setRandomNumber] = useState(null);
   const handlerInput=(event)=>{
 setInput(event.target.value)
   }
@@ -10,12 +12,13 @@ const handlerSubmit=(event)=>{
   props.onSearch(input)
   setInput("")
 }
-const handlerClick=(event)=>{
-  let min=1
-  let max=826
-  let randomNumber=Math.floor(Math.random()*(max-min+1)+min);
-  console.log(randomNumber)
-}
+const handleClick = () => {
+  let min = 1;
+  let max = 826;
+  let randomNum = Math.floor(Math.random() * (max - min + 1) + min);
+  console.log(randomNum);
+  props.onSearch(randomNum)
+};
 
 
 
@@ -25,7 +28,8 @@ const handlerClick=(event)=>{
         <input value={input} onChange={handlerInput} class="searchbarin" type="text" placeholder="Search ID..." />
         <button className="searchbarbut" type="submit">ADD</button>
       </form>
-      <button className="searchbarbut" onClick={handlerClick}>RANDOM</button>
+      <button className="searchbarbut" onClick={handleClick}>RANDOM ID</button>
+        {randomNumber && <h1>{randomNumber}</h1>}
 </div>
 
     );

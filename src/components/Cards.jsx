@@ -1,11 +1,15 @@
 import Card from './Card';
+import Cardempty from './Cardempty';
 import './Styles.css'
 
 export default function Cards(props) {
   
    const { characters } = props;
    return (
-      <div className="character-list">
+    <div>
+      
+        {characters.length===0? <Cardempty></Cardempty>: 
+        <div className="character-list">
         {characters.map((character) => {
           return (
             <Card
@@ -17,7 +21,8 @@ export default function Cards(props) {
               onClose={() => props.onCharacterRemove(character.id)}
             />
           );
-        })}
+        })}</div>}
+      
       </div>
     );
 }
