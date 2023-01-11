@@ -99,3 +99,30 @@
     cursor: pointer;
     border-radius: 30px;
   }
+  @media (max-width:480px){
+    .cardcontainer{
+      align-items: center;
+      height: auto;
+      height: 40%;
+      width: auto;
+      width: 40%;
+      padding: 0%;
+      margin: 25%;
+    }
+    .img{
+      height: 70%;
+    }
+    .cardbutton{
+      margin: auto;
+      margin-top: auto;
+      margin-top: 10%;
+      margin-left: auto;
+      margin-left: 100%;
+      position: absolute;
+    }
+  }
+  @media(max-width:1200px){
+    .cardcontainer{
+      
+    }
+  }

@@ -5,7 +5,7 @@ export default function Cards(props) {
   
    const { characters } = props;
    return (
-    <div>
+    <>
       
         {characters.length===0? <Cardempty></Cardempty>: 
         <div className={styles.characterlist}>
@@ -23,6 +23,6 @@ export default function Cards(props) {
           );
         })}</div>}
       
-      </div>
+      </>
     );
 }

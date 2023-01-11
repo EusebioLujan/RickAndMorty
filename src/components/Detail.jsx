@@ -30,7 +30,7 @@ export default function Detail() {
                 <div className={styles.fotoid}>
                     <div className={styles.auximg}><img src={character.image} alt={character.id} /></div>
 
-                    <h2>ID de Identificación: {character.id}</h2>
+                    <h2 className={styles.idtext}>ID de Identificación: {character.id}</h2>
                 </div>
 
                 <div className={styles.info}>

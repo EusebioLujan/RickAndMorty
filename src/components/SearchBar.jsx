@@ -28,11 +28,13 @@ const handleClick = () => {
       <div className={styles.ahoraestuproblema}>
       <form onSubmit={handlerSubmit}>
         <input value={input} onChange={handlerInput} className={styles.searchbarin} type="text" placeholder="Search ID..." />
+        
         <button className={styles.searchbarbut} type="submit">ADD</button>
       </form>
-      <button className={styles.searchbarbut} onClick={handleClick}>RANDOM ID</button>
-      <NavLink to="about"><button className={styles.searchbarbut1} >About</button></NavLink>
+      <div className={styles.randomabout}><button className={styles.searchbarbut} onClick={handleClick}>RANDOM ID</button>
+      <NavLink className={styles.searchabout} to="about"><button className={styles.searchbarbut}>ABOUT</button></NavLink>
         {randomNumber && <h1>{randomNumber}</h1>}
+        </div>
 </div>
 
     );

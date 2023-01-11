@@ -10,3 +10,12 @@
     max-width: 90%;
     
   }
+  @media (max-width:480px){
+    .characterlist{
+     align-items: center;
+     justify-content: center;
+      margin:5%
+
+    }
+    
+  }
