@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./SearchBar.module.css"
+import { NavLink } from "react-router-dom";
 
 
 export default function SearchBar(props) {
@@ -30,6 +31,7 @@ const handleClick = () => {
         <button className={styles.searchbarbut} type="submit">ADD</button>
       </form>
       <button className={styles.searchbarbut} onClick={handleClick}>RANDOM ID</button>
+      <NavLink to="about"><button className={styles.searchbarbut1} >About</button></NavLink>
         {randomNumber && <h1>{randomNumber}</h1>}
 </div>
 

@@ -6,7 +6,7 @@ import {Routes, Route} from "react-router-dom";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx";
 import Cardempty from "./components/Cardempty";
-
+import {SearchBar} from "./components/SearchBar"
 function App() {
   const [characters, setCharacters] = useState([]); 
   function onSearch(character) {
@@ -42,7 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Cards characters={characters}
         onCharacterRemove={onCharacterRemove}/>}></Route>
-        <Route path="about" element={<Cardempty/>}></Route>
+        <Route path="/" element={<Cardempty/>}></Route>
         <Route path="about" element={<About/>}></Route>
         <Route path="detail/:id" element={<Detail/>}></Route>
       </Routes>

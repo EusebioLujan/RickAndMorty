@@ -29,3 +29,19 @@
   .ahoraestuproblema{
     display: flex;
   }
+  .searchbarbut1 {
+    width: 15%;
+    height: 30px;
+    background-color: rgb(33, 167, 190);
+    color: white;
+    padding: 0px 20px 0px 20px;
+    margin: 8px 0;
+    margin-top: 7px;
+    margin-left: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border:1px solid rgba(255, 255, 255, 0.903);
+    box-shadow: 2px 2px 5px 3px rgba(1, 217, 255, 0.703);
+  }
