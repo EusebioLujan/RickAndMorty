@@ -1,7 +1,6 @@
 import Card from './Card';
 import Cardempty from './Cardempty';
-import './Styles.css'
-
+import styles from "./Cards.module.css"
 export default function Cards(props) {
   
    const { characters } = props;
@@ -9,7 +8,7 @@ export default function Cards(props) {
     <div>
       
         {characters.length===0? <Cardempty></Cardempty>: 
-        <div className="character-list">
+        <div className={styles.characterlist}>
         {characters.map((character) => {
           return (
             <Card 

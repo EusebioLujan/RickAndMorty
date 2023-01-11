@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 import React from 'react';
-import './Styles.css';
+import styles from "./Card.module.css"
 
 const Card = (props) => {
     return (
-        <div className="card-container">
+        <div className={styles.cardcontainer}>
             <div>
-                <button className="card-button" onClick={props.onClose}>
+                <button className={styles.cardbutton} onClick={props.onClose}>
                     X
                 </button>
             </div>
-            <Link to={`/detail/${props.id}`}><div className="card-image">
-                <img className="img"src={props.image} alt={props.name} />
-                <div className="card-info">
-                        <p className="card-name">{props.name}</p>
-                    <div className="card-speandgen">
+            <Link to={`/detail/${props.id}`}><div className={styles.cardimage}>
+                <img className={styles.img} src={props.image} alt={props.name} />
+                <div className={styles.cardinfo}>
+                        <p className={styles.cardname}>{props.name}</p>
+                    <div className={styles.cardspeandgen}>
                         <p>Specie: {props.species}</p>
                         <p>Gender: {props.gender}</p>
                     </div>

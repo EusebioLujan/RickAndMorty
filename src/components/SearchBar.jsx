@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./SearchBar.module.css"
 
 
 export default function SearchBar(props) {
@@ -16,19 +17,19 @@ const handleClick = () => {
   let min = 1;
   let max = 826;
   let randomNum = Math.floor(Math.random() * (max - min + 1) + min);
-  console.log(randomNum);
+  
   props.onSearch(randomNum)
 };
 
 
 
    return (
-      <div className="ahoraestuproblema">
+      <div className={styles.ahoraestuproblema}>
       <form onSubmit={handlerSubmit}>
-        <input value={input} onChange={handlerInput} class="searchbarin" type="text" placeholder="Search ID..." />
-        <button className="searchbarbut" type="submit">ADD</button>
+        <input value={input} onChange={handlerInput} className={styles.searchbarin} type="text" placeholder="Search ID..." />
+        <button className={styles.searchbarbut} type="submit">ADD</button>
       </form>
-      <button className="searchbarbut" onClick={handleClick}>RANDOM ID</button>
+      <button className={styles.searchbarbut} onClick={handleClick}>RANDOM ID</button>
         {randomNumber && <h1>{randomNumber}</h1>}
 </div>
 
