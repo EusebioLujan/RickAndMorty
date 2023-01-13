@@ -1,6 +1,6 @@
 import Card from './Card';
 import Cardempty from './Cardempty';
-import styles from "./Cards.module.css"
+import styles from "./styles/Cards.module.css"
 export default function Cards(props) {
   
    const { characters } = props;

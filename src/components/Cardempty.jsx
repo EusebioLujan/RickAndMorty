@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Cardempty.module.css"
+import styles from "./styles/Cardempty.module.css"
 
 
 export default function Cardempty(){

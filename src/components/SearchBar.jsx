@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./SearchBar.module.css"
+import styles from "./styles/SearchBar.module.css"
 import { NavLink } from "react-router-dom";
 
 
