@@ -1,0 +1,17 @@
+.divgral{
+    
+position:relative;
+justify-content: center;
+height: 800px;
+}
+
+ 
+.formgral{
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+    justify-content: center;
+}
